@@ -1,0 +1,51 @@
+
+
+oracle :
+
+default port number is 1521
+default username and password: scott/tiger , system/manager
+default database : global database : orcl/xe
+
+mysql :
+
+default port number is 3306
+default username and password: root/root
+default database : local database 
+
+
+table : cloumn-name datatype size
+
+
+1) create Local database
+
+ create database emp_db;
+ use emp_db;
+2) create table
+
+  create table emp_info (eid int primary key,ename varchar(25), loc varchar(50));
+  
+  insert into emp_info values(101,'A','abc');
+  insert into emp_info values(102,'B','xyz');
+  insert into emp_info values(103,'C','mno');
+
+  insert into emp_info values(101,'X','ccv');
+
+  select * from emp_info;
+  
+  select eid,ename from emp_info;
+
+  update emp_info set ename='James',loc='IND' where eid=101;
+
+  delete from emp_info where eid =102;
+
+
+  primary key vs Foreign key
+
+SG:
+
+oracle -- 1521
+
+mysl -- 3306
+aurora -- 3306
+
+slserver -- 1433
